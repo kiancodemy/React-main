@@ -1,4 +1,4 @@
-import Expemseitem from "./component/expenseitems";
+import Expenses from "./component/expenses";
 const info = [
   { id: 1, date: new Date(2021, 8, 9), title: "toiletpaper", amount: 249.2 },
   { id: 2, date: new Date(2021, 8, 9), title: "New tv", amount: 749.2 },
@@ -6,7 +6,7 @@ const info = [
 ];
 
 function App() {
-  return <Expemseitem info={info}></Expemseitem>;
+  return <Expenses info={info}></Expenses>;
 }
 
 export default App;
