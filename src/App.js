@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import Expenses from "./component/expenses/expenses";
 import Newexpense from "./component/newexpense/Newexpense";
 const info = [
@@ -17,10 +19,16 @@ const info = [
 ];
 
 function App() {
+  const [datae, setdata] = useState(info);
+  const save = (data) => {
+    setdata([...info, data]);
+
+    console.log(datae);
+  };
   return (
     <div>
-      <Newexpense></Newexpense>
-      <Expenses info={info}></Expenses>;
+      <Newexpense save={save}></Newexpense>
+      <Expenses info={datae}></Expenses>;
     </div>
   );
 }

@@ -1,9 +1,9 @@
 import "./newexpenses.css";
 import Expenseform from "./expenseform";
-export default function Newexpense() {
+export default function Newexpense({save}) {
   return (
     <div className="new-expense">
-      <Expenseform></Expenseform>
+      <Expenseform save={save}></Expenseform>
     </div>
   );
 }
