@@ -1,7 +1,10 @@
 import "./expenseitems.css";
-import Card from "./Card";
+import Card from "../ui/Card";
+import { useState } from "react";
 import Expensedate from "./expendate";
 export default function Expemseitem({ info }) {
+  const [title, setit] = useState(5);
+
   const final = info.map((a) => {
     return (
       <Card key={a.id} className="expense-item">
