@@ -21,7 +21,7 @@ export default function Expenseform({ save }) {
       amount: enteramount,
       date: new Date(enterdate),
     };
-    save({ ...expensedata, id: Math.random().toString() });
+    save({ ...expensedata, id: (Math.random() * 999).toString() });
 
     settitle("");
     setamount("");
