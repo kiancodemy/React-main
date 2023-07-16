@@ -1,4 +1,5 @@
 import "./expenseitems.css";
+import ExpensesList from "./expenselist";
 import ExpensesFilter from "./expensefilter";
 import Card from "../ui/Card";
 import { useState } from "react";
@@ -15,17 +16,22 @@ export default function Expemseitem({ info }) {
     return items.date.getFullYear().toString() === filteredYear;
   });
 
-  const final = filtered.map((a) => {
-    return (
-      <Card key={a.id} className="expense-item">
-        <Expensedate a={a} />
-        <div className="expense-item__description ">
-          <h2>{a.title}</h2>
-          <div className="expense-item__price ">{a.amount}</div>
-        </div>
-      </Card>
+  const final =
+    filtered.length === 0 ? (
+      <ExpensesList filter={filtered} />
+    ) : (
+      filtered.map((a) => {
+        return (
+          <Card key={a.id} className="expense-item">
+            <Expensedate a={a} />
+            <div className="expense-item__description ">
+              <h2>{a.title}</h2>
+              <div className="expense-item__price ">{a.amount}</div>
+            </div>
+          </Card>
+        );
+      })
     );
-  });
 
   return (
     <div>
