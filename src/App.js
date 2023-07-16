@@ -21,12 +21,12 @@ const info = [
 function App() {
   const [datae, setdata] = useState(info);
   const save = (data) => {
-    setdata([...info, data]);
+    setdata([data, ...info]);
 
     console.log(datae);
   };
   return (
-    <div>
+    <div style={{ backgroundColor: "#ddd" }}>
       <Newexpense save={save}></Newexpense>
       <Expenses info={datae}></Expenses>;
     </div>

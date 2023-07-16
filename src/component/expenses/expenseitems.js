@@ -1,9 +1,16 @@
 import "./expenseitems.css";
+import ExpensesFilter from "./expensefilter";
 import Card from "../ui/Card";
 import { useState } from "react";
 import Expensedate from "./expendate";
 export default function Expemseitem({ info }) {
   const [title, setit] = useState(5);
+
+  const [filteredYear, setFilteredYear] = useState("2020");
+
+  const filterChangeHandler = (selectedYear) => {
+    setFilteredYear(selectedYear);
+  };
 
   const final = info.map((a) => {
     return (
@@ -17,5 +24,13 @@ export default function Expemseitem({ info }) {
     );
   });
 
-  return <div>{final}</div>;
+  return (
+    <div>
+      <ExpensesFilter
+        selected={filteredYear}
+        onChangeFilter={filterChangeHandler}
+      ></ExpensesFilter>
+      {final}
+    </div>
+  );
 }
