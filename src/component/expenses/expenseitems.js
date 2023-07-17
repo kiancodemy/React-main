@@ -6,8 +6,6 @@ import Card from "../ui/Card";
 import { useState } from "react";
 import Expensedate from "./expendate";
 export default function Expemseitem({ info }) {
- 
-
   const [filteredYear, setFilteredYear] = useState("2021");
 
   const filterChangeHandler = (selectedYear) => {
@@ -27,7 +25,7 @@ export default function Expemseitem({ info }) {
             <Expensedate a={a} />
             <div className="expense-item__description ">
               <h2>{a.title}</h2>
-              <div className="expense-item__price ">{a.amount}</div>
+              <div className="expense-item__price ">${a.amount}</div>
             </div>
           </Card>
         );

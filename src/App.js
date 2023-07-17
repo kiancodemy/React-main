@@ -4,17 +4,23 @@ import Expenses from "./component/expenses/expenses";
 import Newexpense from "./component/newexpense/Newexpense";
 const info = [
   {
-    id: 1,
-    date: new Date("2021-01-07"),
-    title: "toiletpaper",
-    amount: 249.2,
+    id: "e1",
+    title: "Toilet Paper",
+    amount: 799.49,
+    date: new Date(2020, 7, 14),
   },
-  { id: 2, date: new Date("2021-02-04"), title: "New tv", amount: 749.2 },
+  { id: "e2", title: "New TV", amount: 799.49, date: new Date(2021, 2, 12) },
   {
-    id: 3,
-    date: new Date("2021-08-06"),
-    title: "car insurance",
-    amount: 89.2,
+    id: "e3",
+    title: "Car Insurance",
+    amount: 294.67,
+    date: new Date(2021, 2, 28),
+  },
+  {
+    id: "e4",
+    title: "New Desk (Wooden)",
+    amount: 450,
+    date: new Date(2021, 5, 12),
   },
 ];
 
