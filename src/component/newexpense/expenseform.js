@@ -53,8 +53,8 @@ export default function Expenseform({ save }) {
             value={enterdate}
             onChange={datachange}
             type="date"
-            min="2023-04-06"
-            max="2029-05-06"
+            min="2020-01-06"
+            max="2025-01-06"
           ></input>
         </div>
       </div>

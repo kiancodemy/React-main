@@ -1,11 +1,12 @@
 import "./expenseitems.css";
+import ExpensesChart from "./expensechart";
 import ExpensesList from "./expenselist";
 import ExpensesFilter from "./expensefilter";
 import Card from "../ui/Card";
 import { useState } from "react";
 import Expensedate from "./expendate";
 export default function Expemseitem({ info }) {
-  const [title, setit] = useState(5);
+ 
 
   const [filteredYear, setFilteredYear] = useState("2021");
 
@@ -39,6 +40,7 @@ export default function Expemseitem({ info }) {
         selected={filteredYear}
         onChangeFilter={filterChangeHandler}
       ></ExpensesFilter>
+      <ExpensesChart expenses={filtered}></ExpensesChart>
       {final}
     </div>
   );
